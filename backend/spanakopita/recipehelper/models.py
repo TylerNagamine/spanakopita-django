@@ -14,4 +14,4 @@ class Timer(models.Model):
     duration = models.IntegerField(default=0)
     title = models.CharField(max_length=100, blank=True, null=False)
     type = models.CharField(max_length=2, choices=TIMER_CHOICES, default=STOPWATCH)
-    # owner = models.ForeignKey()
+    owner = models.ForeignKey('auth.User', related_name='timer', on_delete=models.CASCADE)
