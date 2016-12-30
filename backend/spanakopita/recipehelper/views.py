@@ -6,7 +6,7 @@ from recipehelper.serializers import TimerSerializer
 
 
 @api_view(['GET', 'POST'])
-def timer_list(request):
+def timer_list(request, format=None):
     if request.method == 'GET':
         timers = Timer.objects.all()
         serializer = TimerSerializer(timers, many=True)
@@ -20,7 +20,7 @@ def timer_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'POST', 'DELETE'])
-def timer_detail(request, pk):
+def timer_detail(request, pk, format=None):
     try:
         timer = Timer.objects.get(pk=pk)
     except Timer.DoesNotExist:
