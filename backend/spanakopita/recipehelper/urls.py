@@ -1,12 +1,13 @@
-from django.conf.urls import url
-from rest_framework.urlpatterns import format_suffix_patterns
+from django.conf.urls import url, include
 from recipehelper import views
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+
+router.register(r'timers', views.TimerViewSet)
+router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
-    url(r'^timers/$', views.TimerList.as_view()),
-    url(r'^timers/(?P<pk>[0-9]+)/$', views.TimerDetail.as_view()),
-    url(r'^users/$', views.UserList.as_view()),
-    url(r'^users/(?P<pk>[0-9]+)/$', views.UserDetail.as_view())
+    url(r'^', include(router.urls)),
+    url(r'^api_auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
