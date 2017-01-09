@@ -1,13 +1,13 @@
 
-export enum TimerType {
-    Timer,
-    Stopwatch
+export class TimerType {
+    public static Timer = 't';
+    public static Stopwatch = 'sw';
 }
 
 export class Timer {
-    public Created: Date;
-    public Duration: number;
-    public Owner: string;
-    public Title: string;
-    public Type: TimerType;
+    public created: Date;
+    public duration: number;
+    public owner: string;
+    public title: string;
+    public type: TimerType;
 }
