@@ -1,8 +1,25 @@
+@import '../../_styles.scss';
+
 .timer {
-    width: 200px;
-    height: 100px;
     background-color: yellow;
     text-align: center;
 
-    margin: 10px;
+    padding: 7px;
+    margin: 5px;
+
+    min-width: 200px;
+
+    display: block;
+    clear: right;
+    float: left;
+
+    button.active {
+        background-color: darken($spk-button-color, 40);
+    }
+
+    .timer-time {
+        padding: 5px;
+        font-size: larger;
+        font-weight: 1000;
+    }
 }

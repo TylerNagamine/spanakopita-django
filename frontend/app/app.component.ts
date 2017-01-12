@@ -13,6 +13,6 @@ export class AppComponent implements OnInit {
     constructor(private title: Title) { }
 
     ngOnInit(): void {
-        this.title.setTitle("Hello world");
+        this.title.setTitle('Hello world');
     }
 }

@@ -16,14 +16,10 @@ export class TimerManagerComponent implements OnInit {
     constructor(private timerService: TimerService) {}
     
     ngOnInit(): void {
-        
+        this.Timers = this.timerService.getForUser('arloste');
     }
 
     onCompletion(timer: Timer): void {
         console.log('timer completed ' + (timer && timer.type));
-    }
-
-    populate(): void {
-        this.Timers = this.timerService.getForUser('arloste');
     }
 }

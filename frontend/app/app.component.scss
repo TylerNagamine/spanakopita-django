@@ -1,3 +1,26 @@
+@import './styles.scss';
+
 html {
     background-color: red;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.spk-button {
+    border: solid 0;
+    background-color: $spk-button-color;
+    padding: 5px 10px;
+}
+
+.spk-button:active:focus {
+    background-color: darken($spk-button-color, 20);
+}
+
+.spk-button:hover {
+    background-color: darken($spk-button-color, 10);
+}
+
+.spk-button:focus {
+    // outline: none;
+    outline-width: 1px;
+    outline-color: darken($spk-button-color, 10);
 }

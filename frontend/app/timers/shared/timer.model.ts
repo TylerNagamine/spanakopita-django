@@ -1,4 +1,3 @@
-
 export class TimerType {
     public static Timer = 't';
     public static Stopwatch = 'sw';

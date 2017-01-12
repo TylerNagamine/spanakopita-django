@@ -1,5 +1,5 @@
 <div class="timer">
     <div class="timer-time">{{ displayString }}</div>
-    <button (click)="start()">Start timer</button>
-    <button (click)="complete()">Complete timer </button>
+    <button class="spk-button" (click)="start()" [ngClass]="{ active: isActive() }">Start timer</button>
+    <button class="spk-button" (click)="stop()" [ngClass]="{ active: !isActive() }">Stop timer</button>
 </div>

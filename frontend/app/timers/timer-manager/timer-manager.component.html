@@ -1,8 +1,8 @@
 <div class="timer-container">
-    <button (click)="populate()">Populate array</button>
-        <timer 
-            *ngFor="let timer of Timers | async"
-            [timer]="timer"
-            (onCompletion)="onCompletion($event)">
-        </timer>
+    <timer 
+        *ngFor="let timer of Timers | async"
+        [timer]="timer"
+        (onCompletion)="onCompletion($event)">
+    </timer>
+    <div class="clear"></div>
 </div>

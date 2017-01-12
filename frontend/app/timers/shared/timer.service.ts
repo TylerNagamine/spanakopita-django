@@ -24,4 +24,15 @@ export class TimerService {
         return this.http.get(`${this.apiUrl}/owner/`)
             .map((r: Response) => r.json() as Timer[]);
     }
+
+    public update(timer: Timer): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
+            console.log('Updated timer');
+            resolve();
+        });
+    }
+
+    private onError(): void {
+
+    }
 }
