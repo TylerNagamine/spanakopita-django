@@ -11,6 +11,10 @@ html {
     padding: 5px 10px;
 }
 
+.spk-button.active {
+    background-color: darken($spk-button-color, 40);
+}
+
 .spk-button:active:focus {
     background-color: darken($spk-button-color, 20);
 }

@@ -13,10 +13,6 @@
     clear: right;
     float: left;
 
-    button.active {
-        background-color: darken($spk-button-color, 40);
-    }
-
     .timer-time {
         padding: 5px;
         font-size: larger;
