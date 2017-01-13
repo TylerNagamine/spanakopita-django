@@ -2,8 +2,15 @@
 import os
 import sys
 
+DEV = True
+
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spanakopita.settings")
+    if DEV:
+        SETTINGS_PATH = "spanakopita.settings"
+    else:
+        SETTINGS_PATH = "spanakopita.settings"
+
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", SETTINGS_PATH)
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

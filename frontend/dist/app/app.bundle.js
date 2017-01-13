@@ -113,21 +113,21 @@ module.exports = "<div class=\"timer\">\n    <div class=\"timer-time\">{{ displa
 /***/ 405:
 /***/ function(module, exports) {
 
-module.exports = "html {\n  background-color: red;\n  font-family: 'Montserrat', sans-serif; }\n\n.spk-button {\n  border: solid 0;\n  background-color: lightgreen;\n  padding: 5px 10px; }\n\n.spk-button:active:focus {\n  background-color: #38e038; }\n\n.spk-button:hover {\n  background-color: #64e764; }\n\n.spk-button:focus {\n  outline-width: 1px;\n  outline-color: #64e764; }\n"
+module.exports = "html {\n  background-color: red;\n  font-family: 'Montserrat', sans-serif; }\n\n.clear {\n  clear: both; }\n\n.spk-button {\n  border: solid 0;\n  background-color: lightgreen;\n  padding: 5px 10px; }\n\n.spk-button.active {\n  background-color: #189a18; }\n\n.spk-button:active:focus {\n  background-color: #38e038; }\n\n.spk-button:hover {\n  background-color: #64e764; }\n\n.spk-button:focus {\n  outline-width: 1px;\n  outline-color: #64e764; }\n"
 
 /***/ },
 
 /***/ 406:
 /***/ function(module, exports) {
 
-module.exports = ".timer-container {\n  background-color: green;\n  padding: 5px; }\n\n.clear {\n  clear: both; }\n"
+module.exports = ".timer-container {\n  background-color: green;\n  padding: 5px; }\n\n.timer {\n  min-width: 200px;\n  display: block;\n  clear: right;\n  float: left; }\n\n@media screen and (min-width: 320px) {\n  .timer {\n    width: 200px; } }\n"
 
 /***/ },
 
 /***/ 407:
 /***/ function(module, exports) {
 
-module.exports = ".timer {\n  background-color: yellow;\n  text-align: center;\n  padding: 7px;\n  margin: 5px;\n  max-width: 200px;\n  display: block;\n  clear: right;\n  float: left; }\n  .timer button.active {\n    background-color: #189a18; }\n  .timer .timer-time {\n    padding: 5px;\n    font-size: larger;\n    font-weight: 1000; }\n"
+module.exports = ".timer {\n  background-color: yellow;\n  text-align: center;\n  padding: 7px;\n  margin: 5px; }\n  .timer .timer-time {\n    padding: 5px;\n    font-size: larger;\n    font-weight: 1000; }\n  .timer button {\n    margin: 3px; }\n"
 
 /***/ },
 

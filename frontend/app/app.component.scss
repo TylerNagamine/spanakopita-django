@@ -5,6 +5,10 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+.clear {
+    clear: both;
+}
+
 .spk-button {
     border: solid 0;
     background-color: $spk-button-color;
